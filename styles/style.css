@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  background: #000;
+  color: #fff
+}
+
+
+section{
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+
+}
+
+#ul-item{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+#ul-item ul {
+  list-style: none;
+}
+
+#ul-item ul li{
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  margin: 20px
+}
+
+#ul-item ul li img{
+  width: 100%;
+  height: 100%;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+#ul-item ul li h3{
+  text-transform: uppercase;
+}
+
+#ul-item ul li img:hover{
+  opacity: 0.5;
+  transform: scale(1.1) translateY(10px);
+}
