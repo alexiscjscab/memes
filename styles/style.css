@@ -1,72 +1,91 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  font-family: 'Fredoka', sans-serif;
 }
-
-
 
 body {
   background: #000;
-  color: #fff
+  color: #fff;
 }
 
+h1 {
+  margin: 20px 0;
+  letter-spacing: 5px;
+}
 
-section{
+section {
   min-height: 100vh;
   width: 100%;
   text-align: center;
-
 }
 
-#ul-item{
+#ul-item {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  
 }
 
 #ul-item ul {
   list-style: none;
 }
 
-#ul-item ul li{
-  width: 380px;
-  height: 380px;
+#ul-item ul li {
+  width: 360px;
+  height: 360px;
   padding: 10px;
-  margin: 20px;
+  margin: 10px 0;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  position: relative;
 }
 
-#ul-item ul li img{
+@media (max-width: 400px) {
+  #ul-item ul li {
+    width: 330px;
+    height: 330px;
+    padding: 5px;
+    margin: 10px 0;
+  }
+}
+
+#ul-item ul li img {
   width: 100%;
   height: 100%;
+  border-radius: 25px;
 }
 
-#ul-item ul li h3{
+#ul-item ul li h3 {
+  position: relative;
   text-transform: uppercase;
+  bottom: 30px;
+  color: rgba(140, 140, 150, 1);
+  background: rgba(30, 30, 30, 0.8);
+  display: inline;
+  padding: 5px;
 }
 
-#ul-item ul li:hover{
+#ul-item ul li:hover {
   opacity: 0.9;
   transform: scale(1.1) translateY(10px);
   font-weight: 300;
-  color: #ddd;
   letter-spacing: 5px;
+  margin: 20px 0;
 }
-
 
 .button {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin: 12px 0;
 }
 
 .button button {
   margin: 0 10px;
   padding: 10px;
   border: none;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -74,11 +93,49 @@ section{
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
 }
 
-.button button:hover{
-  background: rgba(255,255,255,0.8);
+.button button:hover {
+  background: rgba(255, 255, 255, 0.8);
   transform: scale(1.1);
 }
 
 .button button:focus {
-  background: rgba(30,180,30,0.8);
+  background: rgba(30, 180, 30, 0.8);
+  transform: scale(1.1);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.form input {
+  margin: 0 10px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(30, 30, 30, 0.8);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.form button {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(30, 30, 30, 0.8);
+  color: #fff;
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+.form button:hover {
+  background: rgba(30, 180, 30, 0.8);
+  transform: scale(1.1);
 }
